@@ -1,0 +1,11 @@
+step = 0.05;%resolution of time axis
+number_of_cycles = 50;
+omega = pi/4;%fundamental frequency
+phi = 0;%phase diff
+period = (2*pi)/omega;
+
+t = 0:step:number_of_cycles*period;
+x = 100*sin(omega*t + phi);%required sinusoidal wave
+
+plot(t, x);
+sound(x, 8000);
